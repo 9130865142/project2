@@ -17,18 +17,18 @@
         background: #f8f5f2;
       }
 
-     .back-btn {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  background: red;
-  padding: 6px 15px;
-  border-radius: 20px;
-}
+      .back-btn {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        background: red;
+        padding: 6px 15px;
+        border-radius: 20px;
+      }
 
-.back-btn:hover {
-  background: #6f1d1d;
-}
+      .back-btn:hover {
+        background: #6f1d1d;
+      }
       .header {
         background: black;
         color: white;
@@ -37,7 +37,6 @@
         font-size: 24px;
       }
 
-      
       .gallery img {
         width: 100%;
         border-radius: 15px;
@@ -48,7 +47,6 @@
         transform: scale(1.05);
       }
 
-      
       .owner-card {
         background: white;
         border-radius: 20px;
@@ -64,7 +62,6 @@
         border: 4px solid red;
       }
 
-      
       .owner-card {
         background: white;
         border-radius: 20px;
@@ -173,72 +170,47 @@
   </head>
 
   <body>
-    
-      <div class="header d-flex justify-content-between align-items-center px-3">
-  <a href="../project2/LOC.html" class="back-btn">⬅ Back</a>
-  <div>Life Of Chai ☕</div>
-  <div></div>
-</div>
-   
-    <section class="container py-5 text-center">
+    <div
+      class="header d-flex justify-content-between align-items-center px-3 fixed-top"
+    >
+      <a href="../project2/index.html" class="back-btn">⬅ Back</a>
+      <div>Life Of Chai ☕</div>
+      <div></div>
+    </div>
+
+    <section class="container py-5 text-center mt-5 pt-5">
       <h2>Our Cafe Moments 📸</h2>
 
       <div class="row g-3 mt-3 gallery">
         <div class="col-md-4">
-          <img
-            src="../project2/images/photo2.jpeg"
-          />
+          <img src="../project2/images/photo2.jpeg" />
         </div>
         <div class="col-md-4">
-          <img
-            src="../project2/images/photo3.jpeg"
-          />
+          <img src="../project2/images/photo3.jpeg" />
         </div>
         <div class="col-md-3">
-          <img
-            src="../project2/images/photo4.jpeg"
-          />
+          <img src="../project2/images/photo4.jpeg" />
         </div>
       </div>
     </section>
 
-    
-    <section class="container text-center ">
+    <section class="container text-center">
       <h3>Experience Our Vibe 🎥</h3>
 
-      <iframe
-        width="80%"
-        height="350"
-        src="../project2/images/video.mp4"
-       
-        allowfullscreen
-      ></iframe>
+      <video width="80%" height="350" controls>
+        <source src="../project2/images/video.mp4" type="video/mp4" />
+      </video>
     </section>
 
-    <section class="container text-center py-5 ">
-     
-
-     
-    </section>
     <section class="container text-center">
-      <iframe
-        width="80%"
-        height="350"
-        src="../project2/images/video2.mp4"
-        
-        allowfullscreen
-      ></iframe>
+      <video width="80%" height="350" controls>
+        <source src="../project2/images/video2.mp4" type="video/mp4" />
+      </video>
     </section>
-        
-      
-     
-   
 
-   
     <section class="container py-5">
       <div class="row justify-content-center g-4">
         <div class="col-md-5">
-        
           <div class="owner-card">
             <img
               src="../Day8/images/WhatsApp Image 2026-02-19 at 11.32.16 AM.jpeg"
@@ -266,12 +238,13 @@
             </div>
           </div>
         </div>
-        
-        <div class="col-md-5 ">
-         
-         
-          <div class="owner-card ">
-            <img src="../project2/images/loc image.jpeg image.jpeg" class="franchaise-img" />
+
+        <div class="col-md-5">
+          <div class="owner-card">
+            <img
+              src="../project2/images/loc image.jpeg"
+              class="franchaise-img"
+            />
             <div class="owner-name">FOLLOW US</div>
             <div class="owner-role">Franchise Outlet</div>
 
@@ -287,7 +260,6 @@
             >
               Instagram
             </a>
-           
           </div>
         </div>
       </div>
