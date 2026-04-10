@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap (only CSS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Life of Chai</title>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f8f5f2;
+        color: #2c2c2c;
+        scroll-behavior: smooth;
+        
+      }
+
+     
+      .navbar {
+        background: black;
+        padding: 15px;
+      }
+
+      .logo {
+        color: red;
+        font-size: 24px;
+      }
+
+      
+      #menu-toggle {
+        display: none;
+      }
+
+      
+      .menu-icon {
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        display: none;
+      }
+
+      
+      .menu {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+      }
+
+      .menu li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .hero {
+        min-height: 100vh;
+        padding-top: 150px;
+        display: flex;
+        align-items: center; /* CHANGE */
+        justify-content: center;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085");
+        background-size: cover;
+        background-position: center;
+      }
+
+      
+      .hero div {
+        margin-top: 120px;
+      }
+
+      .hero h1 {
+        font-size: 60px;
+        font-weight: 700;
+        color: white;
+      }
+
+      .hero p {
+        font-size: 18px;
+        color: #f1f1f1;
+      }
+
+       
+      .btn-premium {
+        background: red;
+        color: white;
+        padding: 1px 10px;
+        border-radius: 30px;
+        transition: 0.3s;
+        margin-top: 20px;
+      }
+
+      .btn-premium:hover {
+        background: #6f1d1d;
+      }
+
+      
+      section {
+        padding: 70px 15px;
+      }
+      .contact-section {
+        background: #000;
+        color: white;
+      }
+       footer {
+        background: #000;
+        color: white;
+      }
+      
+      @media (max-width: 768px) {
+        .menu-icon {
+          display: block;
+        }
+
+        .menu {
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background: black;
+          flex-direction: column;
+          text-align: center;
+          display: none;
+          padding: 20px 0;
+        }
+
+        /* TOGGLE WORKING */
+        #menu-toggle:checked + .menu-icon + .menu {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top">
+      <div class="container">
+        <!-- LOGO -->
+        <h2 class="logo">LOC</h2>
+
+        <!-- HIDDEN CHECKBOX -->
+        <input type="checkbox" id="menu-toggle" />
+
+        <!-- TOGGLE BUTTON -->
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <!-- MENU -->
+        <ul class="menu">
+         
+          <li><a href="../project2/About.html">About</a></li>
+          <li><a href="../project2/Menu.html">Menu</a></li>
+          <li><a href="../project2/visit.html">Gallery</a></li>
+         
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div>
+        <h1>Life of Chai</h1>
+        <p class="mt-3">Tiranga Square, Nagpur ☕</p>
+        <p class="quote">"Happiness is right in your cup!" ☕</p>
+       
+      </div>
+    </section>
+ <!-- ORDER -->
+    <section id="order" class="container text-center">
+      <h2 class="text-3xl font-bold mb-4">Order Your Chai ☕</h2>
+
+      <form class="row g-3 justify-content-center">
+        <div class="col-md-4">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          <input
+            type="tel"
+            class="form-control"
+            placeholder="Phone Number"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          
+          <select id="item" class="form-control scrollable" required>
+            <option value="" disabled selected>Select Item</option>
+            <option value="15">Aadrak Chai - ₹15</option>
+            <option value="15">Elaichi Chai - ₹15</option>
+            <option value="20">Lemon Tea - ₹20</option>
+            <option value="20">Black Tea - ₹20</option>
+            <option value="25">Hot Coffee - ₹25</option>
+            <option value="25">Black Coffee - ₹25</option>
+            <option value="30">Chocolate Chai - ₹30</option>
+            <option value="35">Hot Chocolate - ₹35</option>
+            <option value="50">Cold Coffee - ₹50</option>
+            <option value="60">Plain Maggie - ₹60</option>
+            <option value="80">Masala Maggie - ₹80</option>
+            <option value="80">Cheese-Corn Maggie - ₹80</option>
+            <option value="40">Vada Pao - ₹40</option>
+            <option value="50">Cheese Vada - ₹50</option>
+            <option value="30">Ban-Maska - ₹30</option>
+            <option value="40">Cheese Ban-Maska - ₹40</option>
+            <option value="40">Lassi - ₹40</option>
+            <option value="50">Ice Cream Lassi - ₹50</option>
+            <option value="20">Chaas - ₹20</option>
+            <option value="30">Masala Chaas - ₹30</option>
+            <option value="60">Pasta - ₹60</option>
+            <option value="80">White Sauce Pasta - ₹80</option>
+            <option value="50">Sandwich - ₹50</option>
+            <option value="70">Cheese Grill Sandwich - ₹70</option>
+            <option value="70">Mojito - ₹70</option>
+            <option value="50">Cocktail - ₹50</option>
+            <option value="30">Mango Juice - ₹30</option>
+            <option value="25">Lemon Juice - ₹25</option>
+            <option value="35">Mastmelon Juice - ₹35</option>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+           
+     
+
+     
+    
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <input type="number" id="qty" class="form-control" placeholder="Quantity" />
+        </div>
+       <div class="col-md-4">
+  <input type="text" id="price" class="form-control" placeholder="Price" readonly />
+</div>
+
+<div class="col-md-4">
+  <input type="text" id="total" class="form-control" placeholder="Total Amount" readonly />
+</div>
+        
+
+        <div class="col-12">
+          <button type="button" class="btn-premium" onclick="orderNow()">Place Order</button>
+        </div>
+      </form>
+
+      <div class="mt-4">
+        <a
+          
+          href="upi://pay?pa=komalganeshe11@oksbi&pn=LifeOfChai&am=50&cu=INR"
+          class="btn-premium"
+        >
+          Pay via UPI
+</a>
+        </a>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="py-5 bg-light text-center">
+      <h2 class="text-2xl font-bold">Find Us</h2>
+      <p>📍 Tiranga Square, Nagpur</p>
+      <iframe
+        class="w-100 h-[250px] rounded mt-3"
+        src="https://maps.google.com/maps?q=tiranga%20square%20nagpur&output=embed"
+      >
+      </iframe>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section text-center py-10">
+      <h3>Contact Us</h3>
+      <p>📞 9130865142</p>
+    </section>
+    <footer class="text-center py-10">
+      <p>© 2025 Life of Chai | Designed By Komal Ganeshe 😄</p>
+    </footer>
+
+    <script>
+  const item = document.getElementById("item");
+  const qty = document.getElementById("qty");
+  const priceField = document.getElementById("price");
+  const totalField = document.getElementById("total");
+
+  function calculateTotal() {
+    let price = item.value;
+    let quantity = qty.value;
+
+    if (!price || quantity <=0) {
+      priceField.value = "";
+      totalField.value = "";
+      return;
+    }
+      
+       priceField.value = "₹ " + price;
+       totalField.value = "₹ " + (price * quantity);
+    
+     }
+  
+
+  item.addEventListener("change", calculateTotal);
+  qty.addEventListener("input", calculateTotal);
+  
+function orderNow(){
+  let name = document.querySelector('input[type="text"]').value.trim();
+  let phone = document.querySelector('input[type="tel"]').value.trim();
+  let selectedItem = item.value;
+  let quantity = qty.value;
+
+  if(name === "" || phone === "" || selectedItem === "" || quantity === "") {
+    alert(" ⚠️ Please fill all details first!"); 
+    return;
+  }
+
+    if(!/^[6-9]\d{9}$/.test(phone)) {
+    alert("Please enter a valid 10-digit phone number!");
+    return;
+  }
+   
+  if(quantity <= 0) {
+    alert("Quantity must be at least 1!");
+    return;
+  }
+  alert("Order placed successfully ☕🔥");
+
+  window.location.href = "../project2/LOC.html";
+}
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
